@@ -1,0 +1,25 @@
+{%extends 'Customers/CustomerPage.html'%}
+{%block user%}
+<div class="container">
+    <p>Seat Availabilty Details</p>
+    <table style ="border-collapse: collapse;width: 100%;">
+            <tr>
+                <td style="padding: 8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{data['theatername']}}</td>
+            </tr>
+        {% for i in data['movies']%}
+            <tr>
+                <td style="padding: 8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{i['moviename']}}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{i['availableseats']}}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{i['bookedseats']}}</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{i['inprocessseats']}}</td>
+            </tr>
+        {%endfor%}
+    </table>
+</div>
+{%endblock%}

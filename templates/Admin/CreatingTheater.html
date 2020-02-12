@@ -1,0 +1,27 @@
+{%extends 'Admin/AdminPage.html'%}
+{%block createtheater%}
+<div class = 'container'>
+    <form action="/theater" method="POSt">
+       {{form.hidden_tag()}}
+        <div class = 'form-group'>
+            {{form.theatername.label}}
+            {{form.theatername(class="form-control", id = "exampleInputText1", placeholder="Theater Name")}}
+        </div><br>
+        <div class = 'form-group'>
+            {{form.noofshows.label}}
+            {{form.noofshows(class="form-control", id = "exampleInputText2", placeholder="No Of Shows(4)")}}
+        </div><br>
+        <div class = 'form-group'>
+            {{form.noofscreens.label}}
+            {{form.noofscreens(class="form-control", id = "exampleInputText3", placeholder="No Of Screens(4)")}}
+        </div><br>
+        <div class = 'form-group'>
+            {{form.screencapacity.label}}
+            {{form.screencapacity(class="form-control", id = "exampleInputText4", placeholder="Screen Capaity(200)")}}
+        </div><br>
+        <div class="form-group" style = 'text-align:center;'>
+            {{form.submit( class="btn btn-primary")}}
+        </div>
+    </form>
+</div>
+{% endblock %}

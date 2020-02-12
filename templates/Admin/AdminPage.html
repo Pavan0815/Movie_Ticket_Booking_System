@@ -1,0 +1,21 @@
+{% extends 'bootstrap/base.html'%}
+{% block content %}
+<div class = 'container'>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="/theaterlist">Theaters List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/theater">Create Theater</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/addamovie">Add A Movie</a>
+      </li>
+    </ul>
+</div>
+{%block ThreaterList%}{%endblock%}
+{%block createtheater%}{%endblock%}
+{%block addamovie%}{%endblock%}
+{%endblock%}
+
+

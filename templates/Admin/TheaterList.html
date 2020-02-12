@@ -1,0 +1,12 @@
+{%extends 'Admin/AdminPage.html'%}
+{%block ThreaterList%}
+<div class = 'container'>
+<table style ="border-collapse: collapse;width: 100%;">
+        {% for i in result %}
+            <tr>
+                <td style="padding:8px; font-size:20px; text-align: left; border-bottom: 1px solid #ddd;">{{i['theatername']}}</td>
+            </tr>
+        {% endfor %}
+</table>
+</div>
+{%endblock%}

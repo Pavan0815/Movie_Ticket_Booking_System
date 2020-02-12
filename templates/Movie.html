@@ -1,0 +1,45 @@
+{%if action =='/addamovie'%}
+{%extends 'Admin/AdminPage.html'%}
+{%block addamovie%}
+<div class = "container" style="margin-top:20px;">
+    <form action="{{action}}" method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.theatername.label}}
+            {{form.theatername(class="form-control", id = "exampleInputText1", placeholder="Theater Name")}}
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.moviename.label}}
+            {{form.moviename(class="form-control", id = "exampleInputText2", placeholder="Movie Name")}}
+        </div>
+        <br>
+        <div class="form-group" style = 'text-align:center;'>
+            {{form.submit( class="btn btn-primary")}}
+        </div>
+    </form>
+</div>
+{%endblock%}
+{% elif action== '/user'%}
+{%extends 'Customers/CustomerPage.html'%}
+{%block user%}
+<div class = "container" style="margin-top:20px;">
+    <form action="{{action}}" method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.theatername.label}}
+            {{form.theatername(class="form-control", id = "exampleInputText1", placeholder="Theater Name")}}
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.moviename.label}}
+            {{form.moviename(class="form-control", id = "exampleInputText2", placeholder="Movie Name")}}
+        </div>
+        <br>
+        <div class="form-group" style = 'text-align:center;'>
+            {{form.submit( class="btn btn-primary")}}
+        </div>
+    </form>
+</div>
+{%endblock%}
+{%endif%}
